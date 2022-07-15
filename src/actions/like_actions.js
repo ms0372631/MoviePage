@@ -22,7 +22,7 @@ export const requestLikes = likes => dispatch => (
   dispatch(receiveLikes(likes))
 )
 
-export const requestLike = like => dispatch => (
+export const createLike = like => dispatch => (
   dispatch(receiveLike(like))
 )
 
