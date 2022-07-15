@@ -15,6 +15,6 @@ const blocksReducer = (state = {}, action) => {
     default:
       return state;
   }
-}
+};
 
 export default blocksReducer;
