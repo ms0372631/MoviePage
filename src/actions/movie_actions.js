@@ -3,6 +3,7 @@ import * as MovieAPIUtil from "../util/movie_api_util";
 export const RECEIVE_MOVIES = "RECEIVE_POSTS";
 export const RECEIVE_MOVIE = "RECEIVE_POST";
 export const REMOVE_MOVIE = "REMOVE_POST";
+export const RECEIVE_MOVIE_ERRORS = "RECEIVE_MOVIES_ERRORS"
 
 export const receiveMovies = movies => ({
   type: RECEIVE_MOVIES,
