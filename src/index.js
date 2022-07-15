@@ -1,12 +1,11 @@
-import { StrictMode } from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import createStore from "./store/store"
-import App from "./App";
+import App from './App';
 
-const rootElement = document.getElementById("root");
-ReactDOM.render(
-  <StrictMode>
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
     <App store={store}/>
-  </StrictMode>,
-  rootElement
+  </React.StrictMode>
 );

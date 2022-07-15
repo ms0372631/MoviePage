@@ -1,9 +1,14 @@
 import React from "react";
 
-export default function App() {
-
-  return (
-    <div className="App">
-    </div>
-  );
+export default class App extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
+  render() {
+    return (
+      <>
+        <h1> Hello World </h1>
+      </>
+    );
+  }
 }
