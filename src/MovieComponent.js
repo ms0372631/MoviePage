@@ -39,7 +39,7 @@ export default class Movie extends React.Component{
         return (
             <React.Fragment>
                 <div className=''>
-                    <div src="#"><img/>m,nk,</div>
+                    <div src="#"><img/>mmnfe lfen </div>
                     <div className=''>
                         <button onClick={this.likeClick}>{this.state.likevalue}</button>
                         <button onClick={this.blockClick}>{this.state.blockvalue}</button>
