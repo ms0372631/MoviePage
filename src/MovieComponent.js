@@ -4,10 +4,6 @@ import App from "./App";
 import movieStyle from "./movieStyle.css";
 import myImage from "./Cream_Soda_sprite_001.png";
 
-const baseURL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=6e23fd51b4a49f543bd4a70b013b1fc0';
-const pageURL = '&language=en-US&page=';
-const IMG_URL = 'https://image.tmdb.org/t/p/w500';
-
 
 export default class Movie extends React.Component{
     constructor(props){
@@ -15,17 +11,25 @@ export default class Movie extends React.Component{
         this.state = {
             likevalue: 'like',
             blockvalue: 'block',
-            baseURL: baseURL,
-            pageURL: pageURL,
-            IMG_URL: IMG_URL
+            movieTitle: '',
+            release_date: '',
+            vote_count: '',
+            avg_score: '',
+            overview: ''
+
         };
+        this.getMovie = this.getMovie.bind(this);
         this.likeClick = this.likeClick.bind(this);
         this.blockClick = this.blockClick.bind(this);
         this.getMovie = this.getMovie.bind(this);
         this.movieList = this.movieList.bind(this);
     }
 
-    getMovie(event){}
+    getMovie(event, url){
+        fetch(url)
+        .then((res => res.json()))
+        .then(data=>{})
+    }
 
     likeClick(event){
         if(this.state.likevalue === 'like'){
