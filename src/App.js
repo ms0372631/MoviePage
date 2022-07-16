@@ -1,15 +1,15 @@
-import React from "react";
 import { Navbar } from "./components/navbar";
+import React, { StrictMode } from 'react';
+import redux, { Provider } from "react-redux";
+import Movie from "./MovieComponent";
 
-export default class App extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-  render() {
+function App() {
     return (
       <>
         <Navbar />
+        <Movie />
       </>
     );
   }
-}
+  
+  export default App;
