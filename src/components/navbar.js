@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "../styles/navbar.css"
 
 export const Navbar = () => {
 
   return (
-    <div class="navbar">
+    <div className="navbar">
       <div>Home Page</div>
       <Link to="/movies-list">
         <div>Movies List</div>
