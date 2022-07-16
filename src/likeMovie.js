@@ -1,27 +1,22 @@
-
 import React, {Component} from "react";
-import App from "./App";
-import {FaSplotch, FaTrash, FaRegWindowClose} from "react-icon/fa";
+import LikeMovie from "./LikeMovie";
 
-export default class likeMovie extends React.Component {
-    handleLike = e => {
 
-    }
-    handleDelete = e => {
-
-    }
-    handleBlock = e => {
-
-    }
+const LikeMovie = () => {
+    const [data, setData] = useState(null);
+    useEffect(() => {
+        fetch(`url`).then((response) => response.json())
+        .then(data => setData(data))
+    }, []);
     
-    render() {
     return (
-        <div>
-        <img title="movie-poster" src={poster_path} alt="movie-poster"></img>
+        <div classNamme="Like Movie">
+        <img src={poster_path} alt="title"></img>
         <icon><FaSplotch style={{color: 'red', fontSize: '50px'}} onClick={handleLike}/></icon>
         <icon><FaTrash style={{color: 'red', fontSize: '50px'}} onClick={handleDelete}/></icon>
         <icon><FaRegWindowClose style={{color: 'red', fontSize: '50px'}} onClick={handleBlock}/></icon>
         </div>
-    )      
+    )
+
 }
-}
+export default LikeMovie;
