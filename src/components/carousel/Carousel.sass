@@ -1,0 +1,37 @@
+$loading-animation-background-color: rgba(255, 255, 255, .3)
+$carousel-color1: #2AB6FB
+$carousel-color2: transparent
+
+@mixin loading-animation($duration)
+  $name: loading
+  @keyframes #{$name}
+    @content
+  animation-name: $name
+  animation-duration: $duration
+  animation-iteration-count: infinite
+
+.carousel-background
+  position: absolute
+  top: 0
+  left: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+  width: 100%
+  background-color: $loading-animation-background-color
+  .carousel
+    border-top: 50px solid $carousel-color1
+    border-bottom: 50px solid $carousel-color1
+    border-left: 50px solid $carousel-color2
+    border-right: 50px solid $carousel-color2
+    border-radius: 50%
+    @include loading-animation(2s)
+      0%
+        transform: rotate(0)
+        animation-timing-function: ease-in
+      50%
+        transform: rotate(1200deg)
+        animation-timing-function: ease
+      100%
+        transform: rotate(3600deg)
