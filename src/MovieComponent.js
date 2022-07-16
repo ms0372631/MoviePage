@@ -18,17 +18,38 @@ export default class Movie extends React.Component{
             overview: ''
 
         };
-        this.getMovie = this.getMovie.bind(this);
-        this.likeClick = this.likeClick.bind(this);
-        this.blockClick = this.blockClick.bind(this);
-        this.getMovie = this.getMovie.bind(this);
-        this.movieList = this.movieList.bind(this);
+        this.getMovie = this.getMovie.bind(this);       // fetch API method
+        this.ShowMovies = this.ShowMovies.bind(this);   // show movie data
+        this.likeClick = this.likeClick.bind(this);     // like button method
+        this.blockClick = this.blockClick.bind(this);   // block button method
+        this.movieList = this.movieList.bind(this);     // component render method
     }
 
+    // mutable method
     getMovie(event, url){
         fetch(url)
         .then((res => res.json()))
         .then(data=>{})
+    }
+
+    // mutable method
+    ShowMovies(data){
+        main.innerHTML = "";
+        data.forEach(movie => {
+            const {title, poster_path, release_date, overview, vote_average, vote_count} = movie;
+            const movieEl = document.createElement('div');
+            movieEl.classList.add('main');
+            movieEl.innerHTML = `
+                <img src="${IMG_URL+poster_path}" alt="${title}">
+                <div class="movie-title">
+                    ${title}
+                </div>
+                <div class="release-date">
+                    ${release_date}
+                </div>`;
+    
+            main.appendChild(movieEl);
+        }) 
     }
 
     likeClick(event){
