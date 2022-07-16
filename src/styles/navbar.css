@@ -8,3 +8,9 @@
   align-items: center;
   background-color: pink;
 }
+
+.selector-btn {
+  height: 20px;
+  width: 50px;
+  
+}

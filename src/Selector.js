@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./styles/selector.css"
 
 export const Selector = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -9,10 +10,10 @@ export const Selector = () => {
   }
 
   return (
-    <div>
-      <button onClick={() => changePage(-1)} disabled={currentPage === 1}></button>
+    <div className="selector">
+      <button className="selector-btn" onClick={() => changePage(-1)} disabled={currentPage === 1}>Prev</button>
         <p>Current Page is {currentPage}</p>
-      <button onClick={() => changePage(1)}></button>
+      <button className="selector-btn" onClick={() => changePage(1)}>Next</button>
     </div>
   )
 };
