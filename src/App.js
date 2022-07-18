@@ -5,12 +5,14 @@ import { Selector } from "./Selector";
 import "./App.sass";
 import ReactDOM from 'react-dom';
 import Movie from "./components/movie1/MovieComponent";
+import Sort from "./components/sort/Sort";
 
 function App() {
     return (
       <>
         <Navbar />
         <Selector />
+        <Sort />
         <Movie />
       </>
     );
