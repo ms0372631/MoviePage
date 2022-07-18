@@ -7,6 +7,7 @@ import ReactDOM from 'react-dom';
 import Movie from "./components/movie1/MovieComponent";
 import Sort from "./components/sort/Sort";
 import { LikeList } from "./components/likeList";
+import { Blockist } from "./components/blockList";
 
 export const MovieContext = React.createContext();
 
@@ -25,7 +26,7 @@ function App() {
       movieList,
       setmovieList
     };
-    
+
     return (
       <MovieContext.Provider value={allMovieLists}>
         <Navbar />
@@ -33,6 +34,7 @@ function App() {
         <Sort />
         <Movie/>
         <LikeList />
+        <Blockist />
       </MovieContext.Provider>
     );
   }

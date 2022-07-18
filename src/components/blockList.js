@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { MovieContext } from "../App";
 
-export const LikeList = () => {
+export const Blockist = () => {
   const movieLists = useContext(MovieContext);
   
   useEffect(() => {
     
-  }, [movieLists.LikeList])
+  }, [movieLists.Blockist])
 
   return (
-    <>List of LikeLists</>
+    <>List of BlockLists</>
   )
 }
