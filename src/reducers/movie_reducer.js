@@ -8,6 +8,7 @@ const moviesReducer = (state = {}, action) => {
       return action.movies;
     case RECEIVE_MOVIE:
       nextState[action.movie.id] = action.movie;
+      return nextState
     case REMOVE_MOVIE:
       delete nextState[action.movie.id];
       return nextState;

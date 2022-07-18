@@ -1,0 +1,16 @@
+.navbar {
+  position: relative;
+  top: 0;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: pink;
+}
+
+.selector-btn {
+  height: 20px;
+  width: 50px;
+  
+}
