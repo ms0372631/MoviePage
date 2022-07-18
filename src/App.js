@@ -8,6 +8,7 @@ import Movie from "./components/movie1/MovieComponent";
 import Sort from "./components/sort/Sort";
 import { LikeList } from "./components/likeList";
 import { Blockist } from "./components/blockList";
+import { Route } from "react-router-dom";
 
 export const MovieContext = React.createContext();
 
@@ -29,12 +30,12 @@ function App() {
 
     return (
       <MovieContext.Provider value={allMovieLists}>
-        <Navbar />
+        <Route path="/" component={Navbar} />
         <Selector />
         <Sort />
         <Movie/>
-        <LikeList />
-        <Blockist />
+        <Route path="/like-list" component={LikeList} />
+        <Route path="/block-list" component={Blockist} />
       </MovieContext.Provider>
     );
   }
