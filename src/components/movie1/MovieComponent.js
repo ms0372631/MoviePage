@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import movieStyle from "./movieStyle.css";
 import myImage from "../../assets/Cream_Soda_sprite_001.png";
 
-
 export default class Movie extends React.Component{
     constructor(props){
         super(props);
