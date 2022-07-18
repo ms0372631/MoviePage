@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./styles/selector.css"
+import "../styles/selector.css";
 
 export const Selector = () => {
   const [currentPage, setCurrentPage] = useState(1);
