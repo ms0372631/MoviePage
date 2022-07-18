@@ -1,30 +1,38 @@
-import React, {Component} from "react";
-import {useState} from "react"; 
-import "./likeMovie.css";
+/* eslint-disable no-unused-vars */
+import React from "react";
+import {useState, useEffect} from 'react';
+import "./LikeMovie.css"
 
 
 const LikeMovie = () => {
     const [data, setData] = useState(null);
-    const [Like, setLike] = useState(null);
-    const [Delete, setDelete] = useState(null);
-    const [Block, setBlock] = useState(null);
+    const [images, setImage] = useState([]);
 
-    // useEffect(() => {
-    //     fetch(`url`).then((response) => response.json())
-    //     .then(data => setData(data))
-    // }, []);
+    useEffect(() => {
+        fetch(`url`).then((response) => response.json())
+        .then(data => setData(data))
+    }, [data]);
 
-    return (
-        <React.Fragment>
-        <div classNamme="Like Movie">
-         <img src='sea.jpg' alt='sea'></img>
-         <button onClick={()=>setLike(false)} className="like">Like</button>
-         <button onClick={()=>setDelete(false)} className="delete">Delete</button>
-         <button onClick={()=>setBlock(false)} className="block">Block</button>
-        </div>
-        </React.Fragment>
+    const handleDelete = (id) => {
+        setImage((prevState) => prevState.filter((item) => item.id !== id));
+    };
+
+    const handleBlock = (id) => {
+
+    }
     
-    )
-}
-
+    return (
+        <div classNamme="Like Movie">
+        {images.map((image) => {
+            return(
+                <div>
+                <img src='sea.jpg' alt='sea'></img>
+                <button onClick={() => handleDelete(image.id)} className="delete">Delete</button>
+                <button onClick={() => handleBlock(image.id)} className="block">Block</button>
+                </div>
+            );
+        })}
+        </div>
+    );
+};
 export default LikeMovie;
