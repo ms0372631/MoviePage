@@ -8,6 +8,7 @@ import Movie from "./components/movie1/MovieComponent";
 import Sort from "./components/sort/Sort";
 
 function App() {
+  
     const [likeList, setLikeList] = useState([]);
     const [blockList, setBlockList] = useState([]);
     const [popMovies, setPopMovies] = useState([]);
