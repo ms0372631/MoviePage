@@ -5,11 +5,6 @@ import "./HomePage.css";
 
 export const HomePage = () => {
     const [movies, setMovies] = useState([]);
-    // TODO:: if in like list -> like button -> liked
-    // TODO:: if in block list -> block button -> blocked
-
-    // TODO:: MovieComponent props
-
 
     useEffect(() => {
         const url=getURL("playing");
