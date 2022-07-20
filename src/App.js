@@ -1,40 +1,54 @@
 import { Navbar } from "./components/navbar";
 import React, { StrictMode, useState, useC } from 'react';
 import redux, { Provider } from "react-redux";
-import { Selector } from "./components/selector";
 import "./App.sass";
 import ReactDOM from 'react-dom';
-import Movie from "./components/movie1/MovieComponent";
+import { PagePopMovies } from "./components/PagePopMovies";
 import Sort from "./components/sort/Sort";
 import { LikeList } from "./components/likeList";
 import { Blockist } from "./components/blockList";
+import { Route, Routes } from "react-router-dom";
+import { HomePage } from "./HomePage";
 
 export const MovieContext = React.createContext();
 
 function App() {
-  
-    const [likeList, setLikeList] = useState([]);
-    const [blockList, setBlockList] = useState([]);
-    const [popMovies, setPopMovies] = useState([]);
-    const [movieList, setmovieList] = useState([]);
+
+    // for homepage
+    // TODO:: for pop-movies
+    // TODO:: access like list
+    // TODO:: access block list
+    // TODO:: add to like/block list
+
+    const [savedList, setSavedList] = useState([]);
+    // for like list
+    // TODO:: access like list
+    // TODO:: remove from like list
+    // TODO:: add to block list
+
+    // for block list
+    // TODO:: access block list
+    // TODO:: remove from block list
+    // TODO:: add to like list
+
+    // const [popMovies, setPopMovies] = useState([]);
+    // const [movieList, setmovieList] = useState([]);
 
     const allMovieLists = {
-      likeList,
-      setLikeList,
-      blockList,
-      setBlockList,
-      movieList,
-      setmovieList
+      savedList,
+      setSavedList
     };
 
     return (
       <MovieContext.Provider value={allMovieLists}>
         <Navbar />
-        <Selector />
-        <Sort />
-        <Movie/>
-        <LikeList />
-        <Blockist />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          {/* <Route path="/" element={<Sort />} /> */}
+          <Route path="/movies-list" element={<PagePopMovies />} />
+          <Route path="/liked-list" element={<LikeList />} />
+          <Route path="/blocked-list" element={<Blockist />} />
+        </Routes>
       </MovieContext.Provider>
     );
   }
