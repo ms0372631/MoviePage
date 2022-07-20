@@ -1,10 +1,9 @@
 import { Navbar } from "./components/navbar";
 import React, { StrictMode, useState, useC } from 'react';
 import redux, { Provider } from "react-redux";
-import { Selector } from "./components/selector";
 import "./App.sass";
 import ReactDOM from 'react-dom';
-import Movie from "./components/movie1/MovieComponent";
+import PagePopMovies from "./components/PagePopMovies";
 import Sort from "./components/sort/Sort";
 import { LikeList } from "./components/likeList";
 import { Blockist } from "./components/blockList";
@@ -36,9 +35,7 @@ function App() {
       likeList,
       setLikeList,
       blockList,
-      setBlockList,
-      movieList,
-      setmovieList
+      setBlockList
     };
 
     return (
@@ -47,7 +44,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           {/* <Route path="/" element={<Sort />} /> */}
-          <Route path="/movies-list" element={<Movie />} />
+          <Route path="/movies-list" element={<PagePopMovies />} />
           <Route path="/liked-list" element={<LikeList />} />
           <Route path="/blocked-list" element={<Blockist />} />
         </Routes>
