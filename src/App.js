@@ -14,11 +14,23 @@ import {HomePage} from "./HomePage";
 export const MovieContext = React.createContext();
 
 function App() {
-  
+
+    // for homepage
+    // TODO:: for pop-movies
+    // TODO:: add to like/block list
+
+    // for like list
     const [likeList, setLikeList] = useState([]);
+    // TODO:: remove from like list
+    // TODO:: add to block list
+
+    // for block list
     const [blockList, setBlockList] = useState([]);
-    const [popMovies, setPopMovies] = useState([]);
-    const [movieList, setmovieList] = useState([]);
+    // TODO:: remove from block list
+    // TODO:: add to like list
+
+    // const [popMovies, setPopMovies] = useState([]);
+    // const [movieList, setmovieList] = useState([]);
 
     const allMovieLists = {
       likeList,
