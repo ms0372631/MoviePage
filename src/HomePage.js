@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
-import MovieComponent from "./components/movie1/MovieComponent";
+import {MovieComponent} from "./components/movie1/MovieComponent";
 import "./HomePage.css";
 
 export const HomePage = () => {
     const [movies, setMovies] = useState([]);
-   
+
 
     useEffect(() => {
         const url='https://api.themoviedb.org/3/movie/now_playing?api_key=cb12866696d0696b62106d1f1101392a';
@@ -18,7 +18,7 @@ export const HomePage = () => {
         <h2>This is the home page</h2>
         <div className="movies_container">
         {movies.map(movie=>(
-            <MovieComponent 
+            <MovieComponent
             key={movie.id}
             id={movie.id}
             name={movie.title}
