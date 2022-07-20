@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import movieStyle from "./movieStyle.css";
 import myImage from "../../assets/Cream_Soda_sprite_001.png";
 
+import { IMG_API } from "../API";
+
+
 export default class Movie extends React.Component{
     constructor(props){
         super(props);
@@ -14,9 +17,8 @@ export default class Movie extends React.Component{
             vote_count: this.props.vote_count,
             avg_score: this.props.vote_average,
             overview: this.props.overview
-
         };
-       
+
          this.movieList = this.movieList.bind(this);
     }
 
@@ -44,20 +46,20 @@ export default class Movie extends React.Component{
         return (
             <React.Fragment>
                 <div className='list'>
-                    <div><img src={`https://image.tmdb.org/t/p/w500${this.props.poster_path}`} alt="" /></div>
+                    <div><img src={`${IMG_API}${this.props.movie.poster_path}`} alt="" /></div>
                     <div className='btn'>
                         <button id="like" onClick={(e)=>this.likeClick(e)}>{this.state.likevalue}</button>
                         <button id="block" onClick={(e)=>this.blockClick(e)}>{this.state.blockvalue}</button>
                     </div>
                     <div className="detail">
-                        <div id="movieName">Movie Name</div>
-                        <div>Release Date: 1993-10-20</div>
+                        <div id="movieName">{this.props.movie.title}</div>
+                        <div>Release Date: {this.props.movie.release_date}</div>
                         <div className='ranking'>
-                            <div>Vote Count: 1940</div>
-                            <div>Average Score: 9.1/10</div>
+                            <div>Vote Count: {this.props.movie.vote_count}</div>
+                            <div>Rating: {this.props.movie.vote_average}/10</div>
                         </div>
                     </div>
-                    <div className='description'>detail</div>
+                    <div className='description'>{this.props.movie.overview}</div>
                 </div>
             </React.Fragment>
         );
