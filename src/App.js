@@ -20,14 +20,13 @@ function App() {
     // TODO:: access block list
     // TODO:: add to like/block list
 
+    const [savedList, setSavedList] = useState([]);
     // for like list
-    const [likeList, setLikeList] = useState([]);
     // TODO:: access like list
     // TODO:: remove from like list
     // TODO:: add to block list
 
     // for block list
-    const [blockList, setBlockList] = useState([]);
     // TODO:: access block list
     // TODO:: remove from block list
     // TODO:: add to like list
@@ -36,10 +35,8 @@ function App() {
     // const [movieList, setmovieList] = useState([]);
 
     const allMovieLists = {
-      likeList,
-      setLikeList,
-      blockList,
-      setBlockList
+      savedList,
+      setSavedList
     };
 
     return (
