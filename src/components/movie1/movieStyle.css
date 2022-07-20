@@ -1,13 +1,21 @@
 .list{
-    width: 400px;
     text-align: center;
     background-color: bisque;
+    position: relative;
+    border-radius: 3px;
+    max-height: 100%;
+    padding: 10px;
+}
+
+img{
+    width: 250px;
 }
 
 .btn{
     width: 100%;
     margin: 0 3px 0 3px;
     align-content: center;
+    position: relative;
 }
 
 .btn #like{
@@ -30,6 +38,7 @@
     font-family: "American Typewriter";
     font-size: medium;
     align-items: center;
+    
 }
 
 .ranking{

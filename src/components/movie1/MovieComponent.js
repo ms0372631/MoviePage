@@ -9,24 +9,15 @@ export default class Movie extends React.Component{
         this.state = {
             likevalue: 'like',
             blockvalue: 'block',
-            movieTitle: '',
-            release_date: '',
-            vote_count: '',
-            avg_score: '',
-            overview: ''
+            movieTitle: this.props.name,
+            release_date: this.props.release_date,
+            vote_count: this.props.vote_count,
+            avg_score: this.props.vote_average,
+            overview: this.props.overview
 
         };
-        this.getMovie = this.getMovie.bind(this);
-        this.likeClick = this.likeClick.bind(this);
-        this.blockClick = this.blockClick.bind(this);
-        this.getMovie = this.getMovie.bind(this);
-        this.movieList = this.movieList.bind(this);
-    }
-
-    getMovie(event, url){
-        fetch(url)
-        .then((res => res.json()))
-        .then(data=>{})
+       
+         this.movieList = this.movieList.bind(this);
     }
 
     likeClick(event){
@@ -53,16 +44,16 @@ export default class Movie extends React.Component{
         return (
             <React.Fragment>
                 <div className='list'>
-                    <div><img src={myImage} alt="horse" /></div>
+                    <div><img src={`https://image.tmdb.org/t/p/w500${this.props.poster_path}`} alt="" /></div>
                     <div className='btn'>
-                        <button id="like" onClick={this.likeClick}>{this.state.likevalue}</button>
-                        <button id="block" onClick={this.blockClick}>{this.state.blockvalue}</button>
+                        <button id="like" onClick={(e)=>this.likeClick(e)}>{this.state.likevalue}</button>
+                        <button id="block" onClick={(e)=>this.blockClick(e)}>{this.state.blockvalue}</button>
                     </div>
                     <div className="detail">
                         <div id="movieName">Movie Name</div>
                         <div>Release Date: 1993-10-20</div>
                         <div className='ranking'>
-                            <div>Vote Count: 1940</div>&nbsp;|&nbsp;
+                            <div>Vote Count: 1940</div>
                             <div>Average Score: 9.1/10</div>
                         </div>
                     </div>
