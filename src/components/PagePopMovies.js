@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import Carousel from "./carousel/Carousel"
-import Sort from "./sort/Sort";
-import PageSwitch from "./pageSwitch/PageSwitch";
+import { Carousel } from "./carousel/Carousel"
+import { Sort } from "./sort/Sort";
+import { PageSwitch } from "./pageSwitch/PageSwitch";
 import { MovieComponent } from "./movie1/MovieComponent";
 
 import { getURL } from "./API";

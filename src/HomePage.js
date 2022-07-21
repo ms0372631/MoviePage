@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {MovieComponent} from "./components/movie1/MovieComponent";
+import { Carousel } from "./components/carousel/Carousel"
 import { getURL } from "./components/API";
 import "./HomePage.css";
 

@@ -1,22 +1,16 @@
 import React from "react";
 import "./PageSwitch.sass";
 
-export default class PageSwitch extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <>
-        <div className="page-info">
-          <button disabled={this.props.page === 1 ? true : false}
-                  onClick={() => this.props.switchPage(this.props.page - 1)}> Prev </button>
-          <p> {this.props.page} / {this.props.totalPages} </p>
-          <button disabled={this.props.page === this.props.totalPages ? true : false}
-                  onClick={() => this.props.switchPage(this.props.page + 1)}> Next </button>
-        </div>
-      </>
-    );
-  }
-}
+export const PageSwitch = ({page, totalPages, switchPage}) => {
+  return (
+    <>
+      <div className="page-info">
+        <button disabled={page === 1 ? true : false}
+                onClick={() => switchPage(page - 1)}> Prev </button>
+        <p> {page} / {totalPages} </p>
+        <button disabled={page === totalPages ? true : false}
+                onClick={() => switchPage(page + 1)}> Next </button>
+      </div>
+    </>
+  );
+};
