@@ -11,7 +11,7 @@ export const MovieComponent2 = ({item}) => {
   // TODO:: icon onclick -> remove from list & move to like/block list
   const idx = movieContext.savedList.findIndex(movie => movie.movie.id === item.movie.id);
 
-  const editList = (action) => {
+  const specialList = (action) => {
     // action = 0 -> remove from list
     // action = 1 -> move to like list
     // action = 2 -> move to block list
