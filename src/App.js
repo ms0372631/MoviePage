@@ -6,11 +6,12 @@ import ReactDOM from 'react-dom';
 import { PagePopMovies } from "./components/PagePopMovies";
 import Sort from "./components/sort/Sort";
 import { LikeList } from "./components/likeList";
-import { Blockist } from "./components/blockList";
+import { BlockList } from "./components/blockList";
 import { Route, Routes } from "react-router-dom";
 import { HomePage } from "./HomePage";
 
 export const MovieContext = React.createContext();
+
 
 function App() {
 
@@ -47,7 +48,7 @@ function App() {
           {/* <Route path="/" element={<Sort />} /> */}
           <Route path="/movies-list" element={<PagePopMovies />} />
           <Route path="/liked-list" element={<LikeList />} />
-          <Route path="/blocked-list" element={<Blockist />} />
+          <Route path="/blocked-list" element={<BlockList />} />
         </Routes>
       </MovieContext.Provider>
     );
