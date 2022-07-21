@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
 import { MovieComponent2 } from "./movie1/MovieComponent2";
 
 export const LikeList = () => {
