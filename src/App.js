@@ -12,6 +12,7 @@ import { HomePage } from "./HomePage";
 
 export const MovieContext = React.createContext();
 
+
 function App() {
 
     // for homepage
