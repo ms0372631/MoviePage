@@ -33,7 +33,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Selector />} />
-          {/* <Route path="/" element={<Sort />} /> */}
+          <Route path="/" element={<Sort />} />
           <Route path="/movies-list" element={<Movie />} />
           <Route path="/liked-list" element={<LikeList />} />
           <Route path="/blocked-list" element={<Blockist />} />
