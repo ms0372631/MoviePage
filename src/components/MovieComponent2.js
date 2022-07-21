@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import ReactDOM from 'react-dom';
 import { FaSplotch, FaTrash, FaRegWindowClose } from "react-icons/fa";
-import { MovieContext } from "../../App";
-
+import { MovieContext } from "../App";
 import { IMG_API } from "../API";
 
 
