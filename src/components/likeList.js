@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useContext } from "react";
-import { MovieContext } from "../App";
+import React from "react";
+import { MovieComponent2 } from "./movie1/MovieComponent2";
 
 export const LikeList = () => {
-  const movieLists = useContext(MovieContext);
-  
-  useEffect(() => {
-    
-  }, [movieLists.LikeList])
+  // movieContext.savedList[].like => true -> in like list
+  // movieContext.savedList[].like => false -> in block list
+  // movieContext.savedList[].movie => movie_data
 
   return (
-    <>List of LikeLists</>
+    <>
+      <MovieComponent2 />
+    </>
   )
 }
