@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from "react";
-import { MovieComponent2 } from "./movie1/MovieComponent2";
+import { MovieComponent2 } from "./MovieComponent2";
 import { IMG_API } from "./API";
 import { MovieContext } from "./App";
 import { iteratorSymbol } from "immer/dist/internal";

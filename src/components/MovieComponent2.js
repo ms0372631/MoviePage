@@ -33,9 +33,9 @@ export const MovieComponent2 = ({item}) => {
   return (
     <div className="Like Movie">
       <img src={`${IMG_API}${item.movie.poster_path}`} alt=""></img>
-      <FaTrash style={{color: 'red', fontSize: '50px'}} onClick={() => editList(0)}/>
-      {!item.like && (<FaSplotch style={{color: 'red', fontSize: '50px'}} onClick={() => editList(1)}/>)}
-      {item.like && (<FaRegWindowClose style={{color: 'red', fontSize: '50px'}} onClick={() => editList(2)}/>)}
+      <FaTrash style={{color: 'red', fontSize: '50px'}} onClick={() => specialList(0)}/>
+      {!item.like && (<FaSplotch style={{color: 'red', fontSize: '50px'}} onClick={() => specialList(1)}/>)}
+      {item.like && (<FaRegWindowClose style={{color: 'red', fontSize: '50px'}} onClick={() => specialList(2)}/>)}
     </div>
   )
 }
