@@ -14,16 +14,16 @@ export const HomePage = () => {
 
     return (
         <div className="HomePage">
-        <h1>Our Top Rated Movie List</h1>
-        <h2>This is the home page</h2>
-        <div className="movies_container">
-        {movies.map(movie=>(
-            <MovieComponent
-            key={movie.id}
-            id={movie.id}
-            movie={movie}/>
-            ))}
-        </div>
+            <h1>Our Top Rated Movie List</h1>
+            <h2>This is the home page</h2>
+            <div className="movies_container">
+                {movies.map(movie=>(
+                    <MovieComponent
+                    key={movie.id}
+                    id={movie.id}
+                    movie={movie}/>
+                    ))}
+            </div>
         </div>
     )
 }
