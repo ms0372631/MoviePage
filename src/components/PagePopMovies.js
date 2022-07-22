@@ -50,7 +50,7 @@ export const PagePopMovies = () => {
   }, [])
 
   return (
-    <>
+    <div className="HomePage">
       <h1>Popular Movies</h1>
       <Sort sortBy={sortBy}
             sortMovies={sortMovies}
@@ -67,6 +67,6 @@ export const PagePopMovies = () => {
             id={item.id}
             movie={item} />))}
       </div>
-    </>
+    </div>
   );
 }
