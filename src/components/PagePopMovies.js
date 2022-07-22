@@ -50,7 +50,7 @@ export const PagePopMovies = () => {
   }, [])
 
   return (
-    <>
+    <div className="HomePage">
       <h1>Popular Movies</h1>
       <Sort sortBy={sortBy}
             sortMovies={sortMovies}
@@ -58,7 +58,7 @@ export const PagePopMovies = () => {
       <PageSwitch page={page}
                   totalPages={totalPages}
                   switchPage={switchPage} />
-      <div>
+      <div className="movies_container">
         {loading && (<Carousel />)}
         {movies
           .sort((a, b) => a[sortBy] > b[sortBy] ? reverse : -reverse)
@@ -67,6 +67,6 @@ export const PagePopMovies = () => {
             id={item.id}
             movie={item} />))}
       </div>
-    </>
+    </div>
   );
 }
