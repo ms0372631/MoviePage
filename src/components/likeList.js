@@ -10,12 +10,12 @@ export const LikeList = () => {
   const movieContext = useContext(MovieContext);
 
   return (
-    <>
+    <React.Fragment>
       {movieContext.savedList
        .filter(item=>item.like)
        .map(item =><MovieComponent2
        key={item.movie.id}
        item={item} />)}
-    </>
+    </React.Fragment>
   );
 }
