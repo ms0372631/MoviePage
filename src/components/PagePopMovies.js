@@ -58,7 +58,7 @@ export const PagePopMovies = () => {
       <PageSwitch page={page}
                   totalPages={totalPages}
                   switchPage={switchPage} />
-      <div>
+      <div className="movies_container">
         {loading && (<Carousel />)}
         {movies
           .sort((a, b) => a[sortBy] > b[sortBy] ? reverse : -reverse)

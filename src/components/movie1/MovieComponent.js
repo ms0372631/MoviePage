@@ -31,12 +31,12 @@ export const MovieComponent = ({movie}) => {
   return (
       <React.Fragment>
           <div className='list'>
-              <div><img src={`${IMG_API}${movie.poster_path}`} alt="" /></div>
+              <img src={`${IMG_API}${movie.poster_path}`} alt="" />
               <div className='btn'>
-                  <button onClick={() => editSavedList(true)}>
+                  <button class="like" onClick={() => editSavedList(true)}>
                     Like{savedListIdx !== -1 && movieContext.savedList[savedListIdx].movie.id === movie.id &&  movieContext.savedList[savedListIdx].like ? "d" : ""}
                   </button>
-                  <button onClick={() => editSavedList(false)}>
+                  <button class="block" onClick={() => editSavedList(false)}>
                     Block{savedListIdx !== -1 && movieContext.savedList[savedListIdx].movie.id === movie.id && !movieContext.savedList[savedListIdx].like ? "ed" : ""}
                   </button>
               </div>
