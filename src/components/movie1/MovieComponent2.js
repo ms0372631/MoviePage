@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { FaSplotch, FaTrash, FaRegWindowClose } from "react-icons/fa";
 import { MovieContext } from "../../App";
 import { IMG_API } from "../API";
-import ListPageStyle from "../ListPageStyle";
+import ListPageStyle from "../ListPageStyle.css";
 
 
 export const MovieComponent2 = ({item}) => {
@@ -33,7 +33,7 @@ export const MovieComponent2 = ({item}) => {
   }
 
   return (
-    <div className="ListMovie">
+    <div>
       <div><img src={`${IMG_API}${item.movie.poster_path}`} alt=""></img></div>
       <div>
         <FaTrash style={{color: 'red', fontSize: '50px'}} onClick={() => editList(0)} />
