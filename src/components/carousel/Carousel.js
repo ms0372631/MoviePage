@@ -1,5 +1,5 @@
 import React from "react";
-import "./Carousel.sass";
+import "../../styles/Carousel.sass";
 
 export const Carousel = () => {
   return (

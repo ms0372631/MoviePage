@@ -1,5 +1,5 @@
 import React from "react";
-import "./PageSwitch.sass";
+import "../../styles/PageSwitch.sass";
 
 export const PageSwitch = ({page, totalPages, switchPage}) => {
   return (

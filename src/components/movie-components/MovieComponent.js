@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import movieStyle from "./movieStyle.css";
+import "../../styles/MovieStyle.css"
 import { MovieContext } from "../../App";
 
 import { IMG_API } from "../API";
@@ -33,10 +33,10 @@ export const MovieComponent = ({movie}) => {
           <div className='list'>
               <img src={`${IMG_API}${movie.poster_path}`} alt="" />
               <div className='btn'>
-                  <button class="like" onClick={() => editSavedList(true)}>
+                  <button className="like" onClick={() => editSavedList(true)}>
                     Like{savedListIdx !== -1 && movieContext.savedList[savedListIdx].movie.id === movie.id &&  movieContext.savedList[savedListIdx].like ? "d" : ""}
                   </button>
-                  <button class="block" onClick={() => editSavedList(false)}>
+                  <button className="block" onClick={() => editSavedList(false)}>
                     Block{savedListIdx !== -1 && movieContext.savedList[savedListIdx].movie.id === movie.id && !movieContext.savedList[savedListIdx].like ? "ed" : ""}
                   </button>
               </div>

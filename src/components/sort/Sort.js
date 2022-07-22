@@ -1,5 +1,5 @@
 import React from "react";
-import "./Sort.sass";
+import "../../styles/Sort.sass";
 
 export const Sort = ({sortBy, sortMovies, reverse}) => {
   const sortByTitle = sortBy === "title" ? 1 : -1,
