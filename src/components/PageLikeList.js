@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 import { MovieComponent2 } from "./movie-components/MovieComponent2";
 import { IMG_API } from "./API";
 import { MovieContext } from "../App";
+import "../styles/ListPageStyle.css";
 
 export const LikeList = () => {
   // movieContext.savedList[].like => true -> in like list
@@ -10,12 +11,14 @@ export const LikeList = () => {
   const movieContext = useContext(MovieContext);
 
   return (
-    <>
-      {movieContext.savedList
-       .filter(item=>item.like)
-       .map(item =><MovieComponent2
-       key={item.movie.id}
-       item={item} />)}
-    </>
+      <div className="page">
+        {movieContext.savedList
+        .filter(item=>item.like)
+        .map(item =>
+        <MovieComponent2
+        key={item.movie.id}
+        item={item} />
+        )}
+      </div>
   );
 }
