@@ -26,6 +26,7 @@ export const MovieComponent2 = ({item}) => {
       case 2:
         newList[idx].like = false;
         break;
+      default:
     }
     movieContext.setSavedList(newList);
   }
@@ -41,4 +42,3 @@ export const MovieComponent2 = ({item}) => {
     </div>
   )
 }
-

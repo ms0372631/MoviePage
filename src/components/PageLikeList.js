@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, { useContext } from "react";
 import { MovieComponent2 } from "./movie-components/MovieComponent2";
 import { IMG_API } from "./API";
 import { MovieContext } from "../App";
