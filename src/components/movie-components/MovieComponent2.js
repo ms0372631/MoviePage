@@ -6,7 +6,6 @@ import { IMG_API } from "../API";
 
 export const MovieComponent2 = ({item}) => {
   const movieContext = useContext(MovieContext);
-  // TODO:: icon onclick -> remove from list & move to like/block list
 
   const idx = movieContext.savedList.findIndex(movie=>movie.movie.id === item.movie.id);
 

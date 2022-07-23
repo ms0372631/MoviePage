@@ -5,8 +5,6 @@ const API_KEY = "cb12866696d0696b62106d1f1101392a";
 
 export const IMG_API = "https://image.tmdb.org/t/p/w500";
 
-// API useage example
-
 // "playing"  -> for homepage -> get movies that are now in the theaters
 // "pop"      -> for pop movie list -> get popular movies
 export function getURL(cate, page) {
